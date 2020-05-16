@@ -1,1 +1,7 @@
-/* fill in */
+html { /* from universal box with Inheritance */ 
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after { /* from universal box with Inheritance */ 
+    box-sizing: inherit;
+  }
