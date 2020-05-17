@@ -27,7 +27,7 @@
                         <input id="inputCity" class="form" type="text" placeholder="Enter Here">
                         <button>Search</button>
                         <div id="inputCityPast">
-                            <!-- Spot for previous searched cities -->
+                            <ul></ul> <!-- Spot for previous searched cities -->
                         </div>
                         <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
                     </div>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-9">
                 <main class="m-1 p-1">
-                    <div class="card bg-light d-flex justify-content-start">
+                    <div id="currentCity" class="card bg-light d-flex justify-content-start">
                         <h2>City</h2>
                         <p>Tempeture:</p>
                         <p>Humidity:</p>
@@ -47,26 +47,25 @@
                             <div class="card-deck col-md-9">
                                 <h2>5-Day Forecast: </h2>
                                 <div class="card-deck ">
-                                    <div id="forecaseDayOne" class="card col bg-primary text-white">Date One</div>
-                                    <div id="forecaseDayTwo" class="card col bg-primary text-white">Date Two</div>
-                                    <div id="forecaseDayThree" class="card col bg-primary text-white">Date Three</div>
-                                    <div id="forecaseDayFour" class="card col bg-primary text-white">Date Four</div>
-                                    <div id="forecaseDayFive" class="card col bg-primary text-white">Date Five</div>
+                                    <div id="forecastDayOne" class="card col bg-primary text-white">Date One</div>
+                                    <div id="forecastDayTwo" class="card col bg-primary text-white">Date Two</div>
+                                    <div id="forecastDayThree" class="card col bg-primary text-white">Date Three</div>
+                                    <div id="forecastDayFour" class="card col bg-primary text-white">Date Four</div>
+                                    <div id="forecastDayFive" class="card col bg-primary text-white">Date Five</div>
                                 </div>
                             </div>
                         </div>
-                    </main>
+                    </div>
                 </main>
             </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" 
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
         crossorigin="anonymous">
-    </script>
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 

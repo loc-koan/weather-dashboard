@@ -52,3 +52,4 @@ This website is a weather dashboard.
 * https://developer.mozilla.org/
 * https://api.jquery.com/
 * https://getbootstrap.com/docs/4.4/getting-started/introduction/
+* https://openweathermap.org/
