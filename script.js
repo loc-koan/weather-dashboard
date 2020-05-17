@@ -10,15 +10,37 @@ $(document).ready(function () {
     var fullUrlOne = queryUrlOne + apiKey + unitImperial;
     //$("#currentCity").empty();
 
-    $.ajax({
-        url: fullUrlOne,
-        method: "GET"
-    }).then(function (response) {
-        console.log(fullUrlOne);
-        $("#currentCity").html("<h2>" + response.name + " on " + currentDate "</h2>");
-        $("#currentTempeture").text("Tempture: " + response.main.temp);
-        $("#currentHumidity").text("Humidity: " + response.main.humidity);
-        $("#currentWindSpeed").text("Wind Speed: " + response.wind.speed);
-        //$("#currentUvIndex").text("UV Index: " + response.temp);
+
+    // button 
+    $("#inputCity").on("click)", function(event) {
+        
+        event.preventDefault();
+
+        var CityName = $("#inputCity").val();
+        var PreviousCitySearches = [];
+
+        PreviousCitySearches = JSON.parse(localStorage.getItem("PreviousCitySearches")) || [];
+        PreviousCitySearches.push(CityName);
+        localStorage.setItem("PreviousCitySearches",JSON.stringify(PreviousCitySearches));
+
+        runWeatherApp(CityName);
     });
+
+
+    function runWeatherApp (CityName) {
+
+
+        $.ajax({
+            url: fullUrlOne,
+            method: "GET"
+        }).then(function (response) {
+            console.log(fullUrlOne);
+            $("#currentCity").html("<h2>" + response.name + " on " + currentDate "</h2>");
+            $("#currentTempeture").text("Tempture: " + response.main.temp " °F");
+            $("#currentHumidity").text("Humidity: " + response.main.humidity " %");
+            $("#currentWindSpeed").text("Wind Speed: " + response.wind.speed " MPH");
+            //$("#currentUvIndex").text("UV Index: " + response);
+        });
+    }
+
 });
