@@ -5,7 +5,11 @@ $(document).ready(function () {
     var queryURL5 = "api.openweathermap.org/data/2.5/forecast?q=";
     var apiKey = "&appid=228a5030262a91d0915376addc531695";
     var unitImperial = "&units=imperial";
+    
     // example = http://api.openweathermap.org/data/2.5/weather?q=houston&appid=228a5030262a91d0915376addc531695&units=imperial
+    // example = http://api.openweathermap.org/data/2.5/forecast?q=houston&appid=228a5030262a91d0915376addc531695&appid=228a5030262a91d0915376addc531695
+    // example = http://api.openweathermap.org/data/2.5/uvi?appid=228a5030262a91d0915376addc531695&lat=29.76&lon=-95.36
+    
     var fullURL1 = queryURL1 + cityName + apiKey + unitImperial;
     var fullURL5 = queryURL5 + cityName + apiKey + unitImperial;
     //$("#currentCity").empty();
@@ -61,6 +65,7 @@ $(document).ready(function () {
             $("#currentHumidity").text("Humidity: " + response.main.humidity + " %");
             $("#currentWindSpeed").text("Wind Speed: " + response.wind.speed + " MPH");
             //$("#currentUvIndex").text("UV Index: " + response);
+            // UV index not found in above API/string, is it from another API?
         });
 
         // forecast cards
