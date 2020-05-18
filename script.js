@@ -95,6 +95,18 @@ $(document).ready(function () {
         });
     };
 
+    // inputCityPast section
+    function CityPast() {
+        $("#inputCityPast").empty();
+        var sittingInStorage = JSON.parse(localStorage.getItem("PreviousCitySearches")) || [];
+        var arrayLength = sittingInStorage.length;
+
+        for (var i = 0; i < arrayLength; i++) {
+            var cityFromArray = sittingInStorage[i];
+            $("#inputCityPast").append(cityFromArray);
+        }
+    }
+
     console.log(cityInput);
     console.log(cityName);
     console.log(fullURL1);
