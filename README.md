@@ -1,4 +1,4 @@
-## Server-Side APIs: Weather Dashboard
+# Server-Side APIs: Weather Dashboard
 
 # Description
 
@@ -8,7 +8,7 @@ This website is a weather dashboard.  It uses data from [OpenWeather API](https:
 
 * Visit https://loc-koan.github.io/weather-dashboard/ to see the final product or
 
-* Clone my repository at git@github.com:loc-koan/weather-dashboard.git to view its code
+* Clone my repository at https://github.com/loc-koan/weather-dashboard to view its code
 
 # References:
 * https://momentjs.com/
@@ -17,3 +17,4 @@ This website is a weather dashboard.  It uses data from [OpenWeather API](https:
 * https://api.jquery.com/
 * https://getbootstrap.com/docs/4.4/getting-started/introduction/
 * https://openweathermap.org/
+* https://en.wikipedia.org/wiki/Ultraviolet_index 
